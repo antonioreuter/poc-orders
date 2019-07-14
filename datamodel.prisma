@@ -1,0 +1,4 @@
+type Order {
+  id: ID! @id
+  name: String!
+}

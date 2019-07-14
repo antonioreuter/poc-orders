@@ -3,10 +3,10 @@
 import Order from '../domain/models/order';
 import OrderRepository from '../domain/repositories/orderRepository';
 import { injectable, inject } from 'inversify';
-import { prisma } from '../../generated/prisma-client';
+import { prisma } from '../generated/prisma-client';
 
 import { ILogger } from '../domain/interfaces/iLogger';
-import { TYPES } from '../config/types';
+import { TYPES } from '../app/types';
 
 
 @injectable()
@@ -18,7 +18,7 @@ export default class OrderRepositoryImpl implements OrderRepository {
     this.logger = logger;
   }
 
-  async findById(id: number): Promise<Order> {    
+  async findById(id: string): Promise<Order> {    
     const order = await prisma.order({ id });
     return new Order(order);
   }

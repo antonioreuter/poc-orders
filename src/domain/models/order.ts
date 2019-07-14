@@ -1,8 +1,8 @@
 'use strict';
 
 export default class Order {
-  id: number;
-  name: string;
+  public id: string;
+  public name: string;
   // createdAt: Date;
   // updatedAt: Date;
 

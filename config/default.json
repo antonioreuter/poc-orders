@@ -1,0 +1,9 @@
+{
+  "app": {
+    "name": "poc-orders",
+    "version": "1.0"
+  },
+  "logger": {
+    "level": "debug"
+  }
+}

@@ -5,7 +5,7 @@ import { response, request, requestParam, controller, httpGet, httpPost } from '
 import { inject } from 'inversify';
 
 import { ILogger } from '../../../domain/interfaces/iLogger';
-import { TYPES } from '../../../config/types';
+import { TYPES } from '../../../app/types';
 import OrderRepository from '../../../domain/repositories/orderRepository';
 import Order from '../../../domain/models/order';
 
@@ -33,7 +33,7 @@ export default class OrderController {
 
   @httpGet('/:orderId')
   public async getById(
-    @requestParam('orderId') orderId: number, 
+    @requestParam('orderId') orderId: string, 
     @request() req: express.Request, 
     @response() resp: express.Response) {
 

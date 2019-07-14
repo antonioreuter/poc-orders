@@ -5,8 +5,9 @@ import bodyParser from 'body-parser';
 import cookieParser from  'cookie-parser';
 import compression from 'compression';
 import cors from 'cors'
+import helmet from 'helmet';
 
-import AppContainer from './config/appContainer'
+import AppContainer from './appContainer'
 import { Container } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
 
@@ -30,6 +31,7 @@ class Application {
     app.use(cookieParser());
     app.use(compression());
     app.use(cors({ credentials: true, origin: true }));
+    app.use(helmet());
   }
 }
 

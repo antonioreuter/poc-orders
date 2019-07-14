@@ -1,6 +1,6 @@
 'use strict';
 
-import app from './application';
+import app from './app/application';
 
 const PORT = process.env.PORT || 3000;
 

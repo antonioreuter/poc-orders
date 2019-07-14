@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "sourceMap": true,
-    "noImplicitAny": true,
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "noImplicitAny": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["reflect-metadata"],
+    "types": [
+      "reflect-metadata"
+    ],
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": [
-    "src/**/*"
+    "src/**/*"    
   ],
   "exclude": [
+    "src/test/**/*.test.ts",
     "node_modules"
   ]
 }
